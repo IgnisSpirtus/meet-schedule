@@ -6,10 +6,10 @@ from dotenv import load_dotenv
 import json 
 import schedule
 import time
-load_dotenv("creds.env")
-SENDER = os.environ.get("GMAIL_USER")
-PASSWORD = os.environ.get("GMAIL_PASSWORD")
-RECVER = os.environ.get("GMAIL_REC")
+load_dotenv()
+SENDER = os.getenv("GMAIL_USER")
+PASSWORD = os.getenv("GMAIL_PASSWORD")
+RECVER = os.getenv("GMAIL_REC")
 
 f=open('meet-links.json',)
 data = json.load(f)
